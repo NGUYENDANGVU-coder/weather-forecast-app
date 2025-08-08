@@ -18,6 +18,8 @@ A modern weather forecast application built with **React**, **TypeScript**, and 
 - **Vite** – Next-generation frontend tooling for fast builds and hot reload
 - **Axios** – Promise-based HTTP client for API requests
 - **TanStack Query (React Query)** – Powerful data fetching, caching, and state management for React
+- **Tailwind CSS** – Utility-first CSS framework for rapid UI development
+- **Shadcn UI** – Beautifully designed React components built on top of Radix UI and Tailwind CSS
 - **ESLint** – Linting for code quality and consistency
 - **Prettier** – Automatic code formatting
 - **pnpm / npm** – Fast, efficient package management
