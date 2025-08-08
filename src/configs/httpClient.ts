@@ -1,10 +1,10 @@
-import type { AxiosInstance } from "axios";
-import axios from "axios";
+import type { AxiosInstance } from 'axios';
+import axios from 'axios';
 
 const httpClient: AxiosInstance = axios.create({
-  baseURL: "https://api.openweathermap.org",
+  baseURL: 'https://api.openweathermap.org',
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
 });
 

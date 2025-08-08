@@ -1,6 +1,6 @@
-import { ROUTE_PATHS } from "@/constants";
-import Home from "@/pages/Home";
-import Search from "@/pages/Search";
+import { ROUTE_PATHS } from '@/constants';
+import Home from '@/pages/Home';
+import Search from '@/pages/Search';
 
 type RouteItem = {
   label: string;
@@ -9,12 +9,12 @@ type RouteItem = {
 };
 export const ROUTES: RouteItem[] = [
   {
-    label: "Home",
+    label: 'Home',
     path: ROUTE_PATHS.HOME,
     component: Home,
   },
   {
-    label: "Search",
+    label: 'Search',
     path: ROUTE_PATHS.SEARCH,
     component: Search,
   },

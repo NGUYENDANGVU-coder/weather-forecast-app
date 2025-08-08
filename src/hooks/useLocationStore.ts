@@ -1,7 +1,7 @@
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
-import type { TLocationResponse } from "@/types";
-import { LOCATION_DEFAULT } from "@/constants";
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import type { TLocationResponse } from '@/types';
+import { LOCATION_DEFAULT } from '@/constants';
 
 type TLocationStore = {
   locations: TLocationResponse[];
@@ -26,7 +26,7 @@ export const useLocationStore = create<TLocationStore>()(
 
         // Check if location already exists
         const existingLocationIndex = locations.findIndex(
-          (loc) => createLocationId(loc) === locationId
+          (loc) => createLocationId(loc) === locationId,
         );
 
         if (existingLocationIndex !== -1) {
@@ -34,7 +34,7 @@ export const useLocationStore = create<TLocationStore>()(
           const updatedLocations = [...locations];
           const [existingLocation] = updatedLocations.splice(
             existingLocationIndex,
-            1
+            1,
           );
           updatedLocations.unshift(existingLocation);
 
@@ -51,7 +51,7 @@ export const useLocationStore = create<TLocationStore>()(
         const { locations } = get();
         set({
           locations: locations.filter(
-            (location) => createLocationId(location) !== locationId
+            (location) => createLocationId(location) !== locationId,
           ),
         });
         if (
@@ -66,8 +66,8 @@ export const useLocationStore = create<TLocationStore>()(
       },
     }),
     {
-      name: "location-history-storage",
+      name: 'location-history-storage',
       version: 1,
-    }
-  )
+    },
+  ),
 );

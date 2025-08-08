@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { createLocationId, useLocationStore } from "@/hooks/useLocationStore";
-import type { TLocationResponse } from "@/types";
-import { Search, Trash2 } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { createLocationId, useLocationStore } from '@/hooks/useLocationStore';
+import type { TLocationResponse } from '@/types';
+import { Search, Trash2 } from 'lucide-react';
 interface SearchHistoryProps {
   onLocationChange: (location: TLocationResponse) => void;
 }

@@ -1,5 +1,5 @@
-import CurrentForecast from "./components/CurrentForecast";
-import WeekForecast from "./components/WeekForecast";
+import CurrentForecast from './components/CurrentForecast';
+import WeekForecast from './components/WeekForecast';
 
 const Home = () => {
   return (

@@ -1,6 +1,6 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import { ROUTES } from "./routes/routes";
-import MainLayout from "./layouts";
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { ROUTES } from './routes/routes';
+import MainLayout from './layouts';
 
 export function QueryHandler() {
   const location = useLocation();

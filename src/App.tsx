@@ -1,7 +1,7 @@
-import { Suspense } from "react";
-import { QueryHandler } from "./QueryHandler";
-import { Loader } from "./components/common/Loader";
-import { BrowserRouter } from "react-router-dom";
+import { Suspense } from 'react';
+import { QueryHandler } from './QueryHandler';
+import { Loader } from './components/common/Loader';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (

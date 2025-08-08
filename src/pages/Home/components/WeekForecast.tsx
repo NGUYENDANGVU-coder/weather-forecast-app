@@ -1,11 +1,11 @@
-import { Loader } from "@/components/common/Loader";
-import WeatherIcon from "@/components/common/WeatherIcon";
-import { useLocationStore } from "@/hooks/useLocationStore";
-import { useGetForecastWeather } from "@/hooks/useWeather";
-import type { TForecastListItem, TWeatherParams } from "@/types";
-import { getHourFromTimestamp } from "@/utils/getHour";
-import { format, isToday } from "date-fns";
-import { useMemo } from "react";
+import { Loader } from '@/components/common/Loader';
+import WeatherIcon from '@/components/common/WeatherIcon';
+import { useLocationStore } from '@/hooks/useLocationStore';
+import { useGetForecastWeather } from '@/hooks/useWeather';
+import type { TForecastListItem, TWeatherParams } from '@/types';
+import { getHourFromTimestamp } from '@/utils/getHour';
+import { format, isToday } from 'date-fns';
+import { useMemo } from 'react';
 interface ForecastItemProps {
   time: number;
   weather: {
@@ -44,11 +44,14 @@ const WeekForecast = () => {
 
   const groupedWeather = useMemo(() => {
     if (!forecastWeather) return {};
-    return forecastWeather.list.reduce((acc, forecast) => {
-      const date = format(new Date(forecast.dt * 1000), "MMMM dd");
-      acc[date] = [...(acc[date] || []), forecast];
-      return acc;
-    }, {} as Record<string, TForecastListItem[]>);
+    return forecastWeather.list.reduce(
+      (acc, forecast) => {
+        const date = format(new Date(forecast.dt * 1000), 'MMMM dd');
+        acc[date] = [...(acc[date] || []), forecast];
+        return acc;
+      },
+      {} as Record<string, TForecastListItem[]>,
+    );
   }, [forecastWeather]);
   if (isLoading) {
     return <Loader />;
@@ -65,7 +68,7 @@ const WeekForecast = () => {
           <div key={date}>
             <p className="text-secondary text-sm">
               {index === 0 && isToday(new Date(items[0].dt * 1000))
-                ? "Today"
+                ? 'Today'
                 : date}
             </p>
             <div>

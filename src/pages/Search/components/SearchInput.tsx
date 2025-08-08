@@ -1,19 +1,19 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useState } from "react";
-import { locationService } from "@/services/locationService";
-import type { TLocationResponse } from "@/types";
-import { useClickOutside } from "@/hooks/useClickOutside";
-import { ERROR_MESSAGES } from "@/constants/messages";
-import { useLocationStore } from "@/hooks/useLocationStore";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent } from '@/components/ui/card';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { useState } from 'react';
+import { locationService } from '@/services/locationService';
+import type { TLocationResponse } from '@/types';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import { ERROR_MESSAGES } from '@/constants/messages';
+import { useLocationStore } from '@/hooks/useLocationStore';
 interface SearchInputProps {
   onLocationChange: (location: TLocationResponse) => void;
 }
 const SearchInput: React.FC<SearchInputProps> = ({ onLocationChange }) => {
-  const [searchValue, setSearchValue] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [searchValue, setSearchValue] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [locations, setLocations] = useState<TLocationResponse[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -28,7 +28,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onLocationChange }) => {
     }
 
     setIsLoading(true);
-    setErrorMessage("");
+    setErrorMessage('');
     setShowDropdown(false);
 
     try {
@@ -42,7 +42,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onLocationChange }) => {
         setErrorMessage(ERROR_MESSAGES.INVALID_LOCATION);
       }
     } catch (error) {
-      console.error("Search error:", error);
+      console.error('Search error:', error);
       setErrorMessage(ERROR_MESSAGES.INVALID_LOCATION);
       setLocations([]);
       setShowDropdown(false);
@@ -53,19 +53,19 @@ const SearchInput: React.FC<SearchInputProps> = ({ onLocationChange }) => {
   const handleLocationSelect = (location: TLocationResponse) => {
     setSearchValue(`${location.name}, ${location.country}`);
     setShowDropdown(false);
-    setErrorMessage("");
+    setErrorMessage('');
     addLocation(location);
     onLocationChange(location);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
-    setErrorMessage("");
+    setErrorMessage('');
     setShowDropdown(false);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       handleSearch();
     }
   };
@@ -80,10 +80,10 @@ const SearchInput: React.FC<SearchInputProps> = ({ onLocationChange }) => {
           value={searchValue}
           onChange={handleInputChange}
           onKeyDown={handleKeyPress}
-          className={hasError ? "border-destructive" : ""}
+          className={hasError ? 'border-destructive' : ''}
         />
         <Button onClick={handleSearch} disabled={isLoading}>
-          {isLoading ? "Searching..." : "Search"}
+          {isLoading ? 'Searching...' : 'Search'}
         </Button>
       </div>
 

@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
-import SearchHistory from "./components/SearchHistory";
-import SearchInput from "./components/SearchInput";
-import type { TLocationResponse } from "@/types";
-import { ROUTE_PATHS } from "@/constants";
-import { useLocationStore } from "@/hooks/useLocationStore";
+import { useNavigate } from 'react-router-dom';
+import SearchHistory from './components/SearchHistory';
+import SearchInput from './components/SearchInput';
+import type { TLocationResponse } from '@/types';
+import { ROUTE_PATHS } from '@/constants';
+import { useLocationStore } from '@/hooks/useLocationStore';
 
 const Search = () => {
   const navigate = useNavigate();

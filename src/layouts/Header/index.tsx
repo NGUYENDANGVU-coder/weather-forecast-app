@@ -1,7 +1,7 @@
-import { ROUTE_PATHS } from "@/constants";
-import { useLocationStore } from "@/hooks/useLocationStore";
-import { MapPin, Search } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ROUTE_PATHS } from '@/constants';
+import { useLocationStore } from '@/hooks/useLocationStore';
+import { MapPin, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const { selectedLocation } = useLocationStore();

@@ -29,8 +29,8 @@ type TWind = {
 };
 
 type TRain = {
-  "1h"?: number;
-  "3h"?: number;
+  '1h'?: number;
+  '3h'?: number;
 };
 
 type TClouds = {
