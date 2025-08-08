@@ -34,7 +34,7 @@ A modern weather forecast application built with **React**, **TypeScript**, and 
 ### Clone the repository
 
 ```sh
-git clone https://github.com/your-username/weather-forecast-app.git
+git clone https://github.com/NGUYENDANGVU-coder/weather-forecast-app.git
 cd weather-forecast-app
 ```
 
