@@ -3,9 +3,11 @@ import Header from "./Header";
 
 const MainLayout = () => {
   return (
-    <main className="h-screen w-screen">
+    <main className="min-h-screen min-w-screen bg-blue-100">
       <Header />
-      <Outlet />
+      <div className="mt-[56px]">
+        <Outlet />
+      </div>
     </main>
   );
 };
