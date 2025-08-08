@@ -139,6 +139,6 @@
     @apply flex items-center justify-center;
   }
   .wrapper {
-    @apply m-auto w-full px-4 md:px-0 md:w-[40vw] max-w-[600px];
+    @apply m-auto w-full px-4 lg:px-0 lg:w-[40vw] max-w-[600px];
   }
 }

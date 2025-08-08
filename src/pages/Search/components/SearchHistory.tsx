@@ -22,7 +22,7 @@ const SearchHistory: React.FC<SearchHistoryProps> = ({ onLocationChange }) => {
           return (
             <div
               key={locationId}
-              className="flex items-center text-sm md:text-base justify-between px-4 py-4 cursor-pointer border-b last:border-b-0 transition-colors group"
+              className="flex items-center text-sm lg:text-base justify-between px-4 py-4 cursor-pointer border-b last:border-b-0 transition-colors group"
               onClick={() => onLocationChange(location)}
             >
               <div className="text-muted-foreground font-medium">

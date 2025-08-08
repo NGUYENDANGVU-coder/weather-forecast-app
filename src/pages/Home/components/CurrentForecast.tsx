@@ -22,7 +22,7 @@ const CurrentForecast = () => {
       <div className="flex items-center justify-center gap-x-4">
         <WeatherIcon code={currentWeather.weather[0].icon} size={120} />
         <div className="space-y-1 ">
-          <p className="text-xl md:text-5xl font-semibold">
+          <p className="text-xl lg:text-5xl font-semibold">
             {currentWeather.main.temp}°C
           </p>
           <p className="font-medium text-gray-700 first-letter:capitalize">
