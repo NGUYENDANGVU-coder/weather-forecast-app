@@ -4,7 +4,7 @@ import { useLocationStore } from '@/hooks/useLocationStore';
 import { useGetCurrentWeather } from '@/hooks/useWeather';
 import type { TWeatherParams } from '@/types';
 import { format } from 'date-fns';
-import { MoveDownLeft } from 'lucide-react';
+import { MoveDownIcon } from 'lucide-react';
 
 const CurrentForecast = () => {
   const { selectedLocation } = useLocationStore();
@@ -25,7 +25,7 @@ const CurrentForecast = () => {
           <p className="text-xl lg:text-5xl font-semibold">
             {currentWeather.main.temp}°C
           </p>
-          <p className="font-medium text-gray-700 first-letter:capitalize">
+          <p className="font-medium text-gray-700 capitalize">
             {currentWeather.weather[0].description}
           </p>
         </div>
@@ -38,7 +38,12 @@ const CurrentForecast = () => {
         <div className="flex flex-col items-center">
           <p className="text-sm text-secondary font-medium">Winds</p>
           <div className="flex items-center gap-x-1">
-            <MoveDownLeft size={14} />
+            <MoveDownIcon
+              size={14}
+              style={{
+                transform: `rotate(${currentWeather.wind.deg}deg)`,
+              }}
+            />
             <span className="font-semibold">
               {currentWeather.wind.speed} m/s
             </span>

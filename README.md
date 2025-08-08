@@ -129,19 +129,19 @@ npm run preview
 To lint the code:
 
 ```sh
-pnpm run lint
+pnpm run lint:fix
 ```
 Or:
 ```sh
-npm run lint
+npm run lint:fix
 ```
 
 To format code with Prettier:
 
 ```sh
-pnpm run format
+pnpm run prettier:fix
 ```
 Or:
 ```sh
-npm run format
+npm run prettier:fix
 ```
